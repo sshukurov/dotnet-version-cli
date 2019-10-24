@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-version</ToolCommandName>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -12,15 +12,19 @@
     <Description>A dotnet core global tool for changing your csproj version and automatically comitting and tagging - npm version style.</Description>
     <PackageTags>core;version;npm version;version patch;</PackageTags>
     <PackageProjectUrl>https://github.com/skarpdev/dotnet-version-cli/</PackageProjectUrl>
-    <PackageLicenseUrl>https://raw.githubusercontent.com/skarpdev/dotnet-version-cli/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/skarpdev/dotnet-version-cli/</RepositoryUrl>
-    <PackageId>dotnet-version-cli</PackageId>
+    <PackageId>dotnet-version-cli-core3</PackageId>
     <Company>SKARP ApS</Company>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../LICENSE" Pack="true" PackagePath=""/>
   </ItemGroup>
 </Project>
